@@ -454,7 +454,7 @@ ul.footer-links li { display: inline-block; padding: 0 1em; }
 	.tooltip:hover:before, .tooltip:hover:after { display: none; }
 	i.fa-home:after, i.fa-utensils:after, i.fa-mobile-alt:after, i.fa-wine-glass-alt:after, i.fa-shopping-bag:after {     
 		font-size: 0.5em;
-	    font-family: 'Roboto', sans-serif;
+	    font-family: 'Signika', sans-serif;
 	    font-weight: 300;
 	    text-align: center;
 	    line-height: 1.6em;
