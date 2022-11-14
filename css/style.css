@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Signika:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Signika:wght@300;500;700&display=swap');
 
 body { font-size: 1em; font-weight: 300; font-family: 'Signika', sans-serif; line-height: 1.6em; padding: 0; margin: 0; background: #05060D; }
-h1, h2 { font-family: 'Bebas Neue', cursive; font-weight: 300; letter-spacing: 2.5px; line-height: 1.2em; margin: 0; }
-h1 { font-size: 3em; color: #edb63f; }
-h2 { font-size: 2.5em; color: #edb63f; }
-h3 { font-size: 2em; color: #edb63f; font-family: 'Signika', sans-serif; font-weight: 300; line-height: 1.2em; margin: 0; }
+h1, h2 { font-family: 'Arvo', serif; font-weight: 400; line-height: 1.2em; margin: 0; }
+h1 { font-size: 3em; color: #b9b209; }
+h2 { font-size: 2.5em; color: #b9b209; }
+h3 { font-size: 2em; color: #b9b209; font-family: 'Signika', sans-serif; font-weight: 300; line-height: 1.2em; margin: 0; }
 p { font-size: 1em; color: #fff; }
-a { text-decoration: none; color: #edb63f; }
-a:focus, button:focus { outline: 3px solid #edb63f; }
+a { text-decoration: none; color: #b9b209; }
+a:focus, button:focus { outline: 3px solid #b9b209; }
 img { display: block; margin: auto; }
 .capitalize { text-transform: uppercase; font-weight: 500; }
 .website { padding: 5px; border: 2.5px solid; display: block; }
-.sub { font-size: 1.4em; line-height: 1.6em; text-shadow: 0px 0px 5px rgb(0, 0, 0); }
+.sub { font-size: 1.4em; line-height: 1.6em; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); }
 .highlight { background: #fab533; color: #090924; margin: 2.5px; padding: 2.5px; border-radius: 2.5px; }
 .branding { 
 	width: 225px;
@@ -39,7 +39,7 @@ header {
 	flex-wrap: wrap;
 	text-align: center;
 }
-.index-cover { background: #050608 url("../images/thonglor-interior-index.jpg") no-repeat center; height: 100vh; background-size: cover; box-shadow: 0px -125px 100px inset #080914; }
+.index-cover { background: #050608 url("../images/toasties-index-cover.jpg") no-repeat bottom center; height: 100vh; background-size: cover; /*box-shadow: 0px -125px 100px inset #080914;*/ }
 .menu-cover { background: #050608; }
 #nav-menu { 
 	background: #F0EDED;
@@ -159,9 +159,9 @@ header {
     }
 }
 
-main { background: #080914; }
+main { background: #272523; }
 footer { 
-	background: #05060D;
+	background: #0f0f0f;
 	color: #fff;
 	padding: 2.5% 5%;
 	display: flex;
@@ -172,7 +172,7 @@ footer {
 button { 
 	width: 150px;
 	padding: 15px;
-	background: #090924;
+	background: #b9b209;
 	color: #fff;
 	text-align: center;
 	border: none;
@@ -190,25 +190,19 @@ a.modal-button {
 	width: 150px;
 	padding: 15px;
 	margin: auto;
-	/*background: #EDB63F;*/
-	color: #EDB63F;
+	background: #b9b209;
+	color: #fff;
 	text-align: center;
-	border: 2.5px solid #EDB63F;
 	border-radius: 5px;
 	font-size: inherit;
 	cursor: pointer;
-	opacity: 1;
-	transition: color, background .10s ease-in-out;
-    -moz-transition: color, background .10s ease-in-out;
-    -webkit-transition: color, background .10s ease-in-out;
-    /*margin: 5% auto;*/
-    display: block;
+  display: block;
 }
 a.map-button { 
 	width: 150px;
 	padding: 15px;
-	background: #121214;
-	color: #edb63f;
+	background: #353535;
+	color: #fff;
 	margin: 5% 0;
 	display: block;
 	text-align: center;
@@ -219,9 +213,23 @@ a.map-button {
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
 }
-button:hover, a.map-button:hover { opacity: 0.8; }
-a.modal-button:hover { background: #EDB63F; color: #fff; }
-.modal { background: #05060D !important; }
+a.menu-button {
+	width: 210px;
+	padding: 15px;
+	background: #ca561b;
+	color: #fff;
+	margin: 2.5% 1%;
+	display: inline-block;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	opacity: 1;
+	transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+button:hover, a.menu-button:hover, a.map-button:hover { opacity: 0.8; }
+.modal { background: #0f0f0f !important; }
 .modal a.close-modal { display: none !important; }
 .modal img { display: block; max-width: 360px; width: 100%; margin: auto; }
 .modal p { color: #fff; text-align: center; }
@@ -237,13 +245,13 @@ a.modal-button:hover { background: #EDB63F; color: #fff; }
 }
 
 section { 
-	max-width: 1366px;
+/*	max-width: 1366px;*/
 	width: auto;
 	margin: auto;
 	padding: 5%;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: center;
 	/*align-items: center;*/
 	flex-wrap: wrap;
 }
@@ -252,13 +260,14 @@ section.scroll-indicator { padding: 0 5%; justify-content: flex-end; text-align:
 section.story { 
 	background: url("../images/thonglor-bangkok.jpg") no-repeat top left; 
 	background-size: cover; 
-	box-shadow: 200px -125px 125px inset #080914, -50px 125px 125px inset #080914;
 	align-items: center;
 }
 section.story img { max-width: 480px; width: 100%; }
-section.location { align-items: center; }
-section.location img { max-width: 480px; width: 100%; }
-section.find-us { max-width: 90%; justify-content: flex-end; align-items: flex-start; background: url('../images/thonglor-map.jpg') center no-repeat; height: 50vh; }
+section.humbowl { align-items: center; }
+section.humbowl img { max-width: 480px; width: 100%; }
+section.catering { background: url("../images/toasties-catering-bg.jpg") no-repeat; background-size: cover; text-align:center; display: block; }
+section.find-us { max-width: 90%; justify-content: flex-end; align-items: flex-start; background: url('../images/toasties-map.jpg') center no-repeat; height: 50vh; }
+section.find-us p { color: #000; background: #fff; padding: 15px; border-radius: 5px; }
 table.business-hours th {
   text-align: right; 
 }
@@ -383,7 +392,7 @@ ul.primary, ul.primary li { padding: 0; }
 ul.primary li a { color: #272d2d;  text-align: center;}
 ul.secondary, ul.social { text-align: center; padding: 0; }
 ul.secondary li, ul.social li { display: inline-block; padding: 1%; }
-ul.secondary li a { text-decoration: underline; color: #fab533;}
+ul.secondary li a { text-decoration: underline; color: #b9b209;}
 li a { width: 100%; display: inline-block; }
 
 /* i.fas { margin: 0 6.5px; vertical-align: middle; }*/
@@ -392,10 +401,11 @@ i.fa-images { /*margin: 0 3.5px;*/ }
 i.fa-fw { font-size: 1.2rem; }
 i.fa-subway { vertical-align: baseline; }
 i.fa-level-up-alt { vertical-align: top; }
+i.fa-heart { color: #ca561b; }
 
 .line { display: inline-block; text-align: center; padding: 0 2.5px; border-radius: 25px; width: 20px; font-weight: 500; }
 .line-1, .line-2, .line-3 { background: #ee352e; color: #fff; }
-.line-B, .line-D, .line-F { background: #FF6319; }
+.line-B, .line-D, .line-F { background: #FF6319; color: #fff; }
 .line-N, .line-Q, .line-R { background: #FCCC0A; color: #000; }
 .line-A, .line-C, .line-E { background: #0039a6; color: #fff; }
 
