@@ -257,11 +257,6 @@ section {
 }
 section:after { content:''; display: table; }
 section.scroll-indicator { padding: 0 5%; justify-content: flex-end; text-align: right; display: none; }
-section.story { 
-	background: url("../images/thonglor-bangkok.jpg") no-repeat top left; 
-	background-size: cover; 
-	align-items: center;
-}
 section.story img { max-width: 480px; width: 100%; }
 section.humbowl { align-items: center; }
 section.humbowl img { max-width: 480px; width: 100%; }
