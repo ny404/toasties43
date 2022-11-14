@@ -395,7 +395,7 @@ i.fa-level-up-alt { vertical-align: top; }
 
 .line { display: inline-block; text-align: center; padding: 0 2.5px; border-radius: 25px; width: 20px; font-weight: 500; }
 .line-1, .line-2, .line-3 { background: #ee352e; color: #fff; }
-.line-F { background: #FF6319; }
+.line-B, .line-D, .line-F { background: #FF6319; }
 .line-N, .line-Q, .line-R { background: #FCCC0A; color: #000; }
 .line-A, .line-C, .line-E { background: #0039a6; color: #fff; }
 
