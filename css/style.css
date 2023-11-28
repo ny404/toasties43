@@ -4,11 +4,12 @@ body { font-size: 1em; font-weight: 300; font-family: 'Signika', sans-serif; lin
 h1, h2 { font-family: 'Arvo', serif; font-weight: 400; line-height: 1.2em; margin: 0; }
 h1 { font-size: 3em; color: #b9b209; }
 h2 { font-size: 2.5em; color: #b9b209; }
-h3 { font-size: 2em; color: #b9b209; font-family: 'Signika', sans-serif; font-weight: 300; line-height: 1.2em; margin: 0; }
+h3 { font-size: 2em; color: #b9b209; font-family: 'Signika', sans-serif; font-weight: 300; line-height: 1.2em; }
 p { font-size: 1em; color: #fff; }
 a { text-decoration: none; color: #b9b209; }
 a:focus, button:focus { outline: 3px solid #b9b209; }
 img { display: block; margin: auto; }
+.bold-it { font-family: 'Arvo', serif; font-weight: 500; color: #b9b209; }
 .capitalize { text-transform: uppercase; font-weight: 500; }
 .website { padding: 5px; border: 2.5px solid; display: block; }
 .sub { font-size: 1.4em; line-height: 1.6em; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); }
@@ -40,7 +41,7 @@ header {
 	text-align: center;
 }
 .index-cover { background: #050608 url("../images/toasties-index-cover.jpg") no-repeat bottom center; height: 100vh; background-size: cover; /*box-shadow: 0px -125px 100px inset #080914;*/ }
-.menu-cover { background: #050608; }
+.menu-cover { background: #050608 url("../images/toasties-catering-cover.jpg") no-repeat bottom center; height: 45vh; background-size: cover; }
 #nav-menu { 
 	background: #F0EDED;
 	font-size: 1.2em;
@@ -274,11 +275,11 @@ th, td { padding: 2.5px; }
 .justify-reset h2 { text-align: initial; margin: 0.67em 0; }
 .justify-reset ul { list-style: initial; padding: 0 2.5%; margin: 0; }
 .justify-reset li { padding: 0; margin: 0; color: #fff; }
-nav.scroll-wrapper { padding: 0 5%; background: #090924; }
+nav.scroll-wrapper { padding: 0 5%; background: #0f0f0f; position: sticky; position:-webkit-sticky; top: 0;}
 
 section h2, p.subheading { width: 100%; }
 p.subheading { color: #E9B857; }
-hr { width: 100%; height: 3px; color: #fab533; background: #fab533; border: none; }
+hr { width: 100%; height: 2px; color: #fff; background: #fff; border: none; margin-bottom: 25px; }
 
 .col-1 { width: 8.33333333%; }
 .col-2 { width: 16.66666667%; }
@@ -332,24 +333,58 @@ ul.tabs.display li:last-child { padding-right: 0; }
 ul.tabs.display li:nth-child(odd) img { border-top-left-radius: 35%; border-bottom-right-radius: 35%;}
 ul.tabs.display li:nth-child(even) img { border-top-right-radius: 35%; border-bottom-left-radius: 35%;}
 ul.tabs button { width: auto; padding: 20px; background: none; border-radius: 0; border-top: 3px solid transparent; border-bottom: 3px solid transparent; color: #fff; font-weight: inherit; }
-ul.tabs button:focus { outline: none; border-bottom: 3px solid #fab533; }
+ul.tabs button:focus { outline: none; border-bottom: 3px solid #ca561b; }
 
 [role="tabpanel"] {
 	outline: none;
 }
 
-.divider { width: 90%; padding: 5%; }
-.divider:last-child { padding-bottom: 0; }
-.divider img { width: 320px; height: 137px; margin: auto; display:block; }
+.food-section { 
+	width: 47.5%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: baseline;
+}
 
-.food-item { 
+.left { margin-right: 2.5%; }
+.right { margin-left: 2.5%; }
+.food-section .food-image { width: 25%; padding-right: 5%; padding-bottom: 5%; }
+.food-section .food-image img { width: 100%; max-width: 200px; height: 100%; max-height: 150px; object-fit: cover; }
+.food-section .food-item { width: 55%; }
+.food-section .food-item-no-image { width: 85%; }
+.food-section .food-item.col-xs { width: 70%; padding-right: 0; }
+.food-section .food-item-no-image.col-xs { width: 100%; padding-right: 0; }
+.food-section .price { width: 12.5%; padding-left: 2.5%; color: #fff; font-family: 'Arvo', serif; font-weight: 500; text-align: right; }
+.food-section img {
+  opacity: 1;
+  transition: opacity 1s;
+}
+ 
+.food-section img[data-src] {
+  opacity: 0;
+}
+
+.preview { width: 100%; max-width: 320px; }
+.tags { display: inline-block; margin-right: 5px; }
+.spicy { color: #ff8993; }
+.gluten { color: #cb9956; }
+.vegetarian { color: #33c825; }
+.vegan { color: #25c88c; }
+.subtitle { color: #ca561b; }
+.content {
+	padding: 5%;
+	width: 90%;
+}
+.no-image { padding: 5% 0; width: 100%; }
+
+
+/*.food-item { 
 	width: 49%;
 	margin: 0.5%;
 	display: flex;
 	justify-content: center;
 	/*border: 1px solid #F1D6B8;*/
 	/*transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out; */
-}
 /*.food-item:hover { 
 	transform: scale(1.0125);
 	box-shadow:
@@ -360,7 +395,7 @@ ul.tabs button:focus { outline: none; border-bottom: 3px solid #fab533; }
 		0 41.8px 33.4px rgba(0, 0, 0, 0.086),
 		0 100px 80px rgba(0, 0, 0, 0.12);
 }*/
-.food-item h3 { margin-top: 0; text-align: left; font-family: initial; font-size: 2em; }
+/*.food-item h3 { margin-top: 0; text-align: left; font-family: initial; font-size: 2em; }
 .food-item img {
   opacity: 1;
   transition: opacity 1s;
@@ -382,7 +417,7 @@ ul.tabs button:focus { outline: none; border-bottom: 3px solid #fab533; }
 	padding: 5%;
 	width: 90%;
 }
-.no-image { padding: 5% 0; width: 100%; }
+.no-image { padding: 5% 0; width: 100%; }*/
 ul { list-style: none; padding: 10%; margin: 0; }
 li { line-height: 1.6em; padding: 5%;}
 ul.primary, ul.primary li { padding: 0; }
@@ -419,14 +454,16 @@ ul.footer-links li { display: inline-block; padding: 0 1em; }
 
 @media screen and (max-width: 767px){
 	header { height: 100vh; }
+	.menu-cover { background-position: left; height: 65vh; }
 	footer { margin-bottom: 15%; }
 	.branding-menu { width: 200px; height: 200px; }
 	section.find-us { align-items: flex-end; height: 65vh; }
 	section.about-us, section.story { flex-direction: column-reverse; }
 	.about-img, .map-img { height: 50vh; }
 	section h2 { padding-top: 5%; }
-	.food-item { display: block; }
-	.food-item .content { width: 100%; padding: 5% 0; }
+	.left, .right { margin: 0; }
+	/*.food-item { display: block; }
+	.food-item .content { width: 100%; padding: 5% 0; }*/
 	.preview { max-width: 375px; max-height: 375px; width: 100%; display: block; margin: auto; }
 	/*.divider img { width: 240px; height: 103px; }*/
 	.col-xs { width: 100%; }
@@ -444,7 +481,7 @@ ul.footer-links li { display: inline-block; padding: 0 1em; }
 		bottom: 0;
 	}
 	#container { margin-left: 0; }
-	ul.primary li { display: inline-block; width: 33.3333333%; float: left;}
+	ul.primary li { display: inline-block; width: 25%; float: left; padding: 1% 0;}
 	ul.secondary li { display: block; }
 	ul.social li { padding: 2.5%; }
 	.tooltip { padding: 5% 0; }
