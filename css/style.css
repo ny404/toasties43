@@ -495,7 +495,7 @@ ul.footer-links li { display: inline-block; padding: 0 1em; }
 	    display: block; 
 	}
 	i.fa-home:after { content: 'Home'; }
-	i.fa-utensils:after { content: 'Food'; }
+	i.fa-utensils:after { content: 'Cater'; }
 	i.fa-mobile-alt:after { content: 'Call'; }
 	i.fa-wine-glass-alt:after { content: 'Drink'; }
 	i.fa-shopping-bag:after { content: 'Order'; }
