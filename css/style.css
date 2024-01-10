@@ -188,6 +188,7 @@ button {
     display: inline-block;
 }
 a.modal-button { 
+	display: block;
 	width: 150px;
 	padding: 15px;
 	margin: auto;
@@ -197,7 +198,6 @@ a.modal-button {
 	border-radius: 5px;
 	font-size: inherit;
 	cursor: pointer;
-  display: block;
 }
 a.map-button { 
 	width: 150px;
