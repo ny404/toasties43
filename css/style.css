@@ -444,6 +444,9 @@ i.fa-heart { color: #ca561b; }
 ul.footer-links { text-align: right; }
 ul.footer-links li { display: inline-block; padding: 0 1em; }
 
+.fa-lg { font-size: initial; }
+.mobile-tooltip { display: none; }
+
 @media screen and (max-width: 1024px){
 	#nav-menu { width: 15%; }
 	#container { margin-left: 15%; }
@@ -494,9 +497,12 @@ ul.footer-links li { display: inline-block; padding: 0 1em; }
 	    line-height: 1.6em;
 	    display: block; 
 	}
-	i.fa-home:after { content: 'Home'; }
+	i.fa-house:after { content: 'Home'; }
 	i.fa-utensils:after { content: 'Cater'; }
-	i.fa-mobile-alt:after { content: 'Call'; }
-	i.fa-wine-glass-alt:after { content: 'Drink'; }
-	i.fa-shopping-bag:after { content: 'Order'; }
+	i.fa-mobile-screen:after { content: 'Call'; }
+	i.fa-wine-glass:after { content: 'Drink'; }
+	i.fa-bag-shopping:after { content: 'Order'; }
+	.fa-lg { font-size: 1.25em; }
+	.tooltip { padding: 10% 0 0; }
+	.mobile-tooltip { display: block; }
 }
